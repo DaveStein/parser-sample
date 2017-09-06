@@ -9,6 +9,11 @@
             <version>2.4</version>
             <classifier>jdk15</classifier>
         </dependency>
+        <dependency>
+            <groupId>xom</groupId>
+            <artifactId>xom</artifactId>
+            <version>1.1</version>
+        </dependency>
     </dependencies>
 
     <parent>
@@ -43,7 +48,9 @@
                 <plugin>
                     <groupId>org.jenkins-ci.tools</groupId>
                     <artifactId>maven-hpi-plugin</artifactId>
-                    <version>2.0</version>
+                    <configuration>
+                        <pluginFirstClassLoader>true</pluginFirstClassLoader>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
